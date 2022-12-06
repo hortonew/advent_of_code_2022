@@ -1,37 +1,26 @@
 from load import convert_to_list
 
 
-def six_one():
+def get_total_including_marker(size: int) -> int:
     lines = convert_to_list("inputs/6.txt")
     total = 0
-    start_of_packet_marker = []
+    start_of_packet_marker: list[str] = []
     for character in lines[0]:
-        if character in start_of_packet_marker:
-            while character in start_of_packet_marker:
-                start_of_packet_marker.pop(0)
+        while character in start_of_packet_marker:
+            start_of_packet_marker.pop(0)
 
         start_of_packet_marker.append(character)
         total += 1
 
-        if len(start_of_packet_marker) == 4:
+        if len(start_of_packet_marker) == size:
             break
 
     return total
+
+
+def six_one():
+    return get_total_including_marker(4)
 
 
 def six_two():
-    lines = convert_to_list("inputs/6.txt")
-    total = 0
-    start_of_packet_marker = []
-    for character in lines[0]:
-        if character in start_of_packet_marker:
-            while character in start_of_packet_marker:
-                start_of_packet_marker.pop(0)
-
-        start_of_packet_marker.append(character)
-        total += 1
-
-        if len(start_of_packet_marker) == 14:
-            break
-
-    return total
+    return get_total_including_marker(14)
