@@ -5,6 +5,7 @@ from day_4 import four_one, four_two
 from day_5 import five_one, five_two
 from day_6 import six_one, six_two
 from day_7 import seven_one, seven_two
+from day_8 import eight_one, eight_two
 
 print(f"Day 1_1: {one_one()}")
 print(f"Day 1_2: {one_two()}")
@@ -26,3 +27,6 @@ print(f"Day 6_2: {six_two()}")
 
 print(f"Day 7_1: {seven_one()}")
 print(f"Day 7_2: {seven_two()}")
+
+print(f"Day 8_1: {eight_one()}")
+print(f"Day 8_2: {eight_two()}")
